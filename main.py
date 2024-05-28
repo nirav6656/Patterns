@@ -77,16 +77,24 @@ def pattern10(n):
 # Floyd's Triangle
 def pattern11(n):
     for i in range(n):
-        if (i%2 == 0):
+        if i % 2 == 0:
             start = 1
         else:
             start = 0
         for j in range(i):
-
             print(start, end=" ")
             start = 1 - start
         print("\n")
 
+def pattern17(n):
+    for i in range(n):
+        for _ in range(n - i - 1):
+            print(" ", end=" ")
+        for j in range(i + 1):
+            print(chr(65 + j), end=" ")
+        for j in range(i - 1, -1, -1):
+            print(chr(65 + j), end=" ")
+        print()
 
 
-pattern11(5)
+pattern17(5)
