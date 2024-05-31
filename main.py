@@ -97,4 +97,58 @@ def pattern17(n):
         print()
 
 
-pattern17(5)
+def pattern18(n):
+    for i in range(n):
+        for j in reversed(range(i+1)):
+            print(chr(69 - j), end=" ")
+        print()
+
+def pattern19(n):
+    inispace = 0
+    for i in range(n):
+
+        for _ in range(n - i):
+            print("*", end=" ")
+        for _ in range(inispace):
+            print(" ", end=" ")
+        for _ in range(n-i):
+            print("*", end=" ")
+
+        inispace += 2
+        print(" ")
+
+    inispace = 8
+    for i in range(n):
+
+        for _ in range(i+1):
+            print("*", end=" ")
+        for _ in range(inispace):
+            print(" ", end=" ")
+        for _ in range(i+1):
+            print("*", end=" ")
+
+        inispace -= 2
+        print(" ")
+
+
+
+
+
+
+# count digit
+
+import math
+count = int(math.log10(778945)+1)
+print(count)
+
+# reverse a number
+
+rev_number = 0
+n = 6348
+
+while(n>0):
+    last_digit = n % 10
+    n = n//10
+    rev_number = (rev_number*10) + last_digit
+
+print(rev_number)
